@@ -5,9 +5,7 @@ import "./index.css";
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter basename="/site">
+  <BrowserRouter basename="/site">
     <App />
   </BrowserRouter>
-  </StrictMode>
 );

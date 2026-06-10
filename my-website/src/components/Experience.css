@@ -1,0 +1,81 @@
+.experiences-container {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #d1fae5 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.experiences-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-item {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.experience-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(5, 150, 105, 0.2);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.experience-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #dbeafe 0%, #d1fae5 100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-item:hover .experience-image {
+  transform: scale(1.05);
+}
+
+.experience-description {
+  width: 100%;
+  padding: 28px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  color: #065f46;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

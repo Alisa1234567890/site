@@ -10,9 +10,11 @@ import "./App.css";
 
 function App() {
   const [showPopup, setShowPopup] = useState(true); 
+  const navigate = useNavigate();
 
   const handleDiscoverProjects = () => {
-    setShowPopup(false);
+  setShowPopup(false);
+  navigate("/projects");
   };
 
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import WelcomePopup from "./components/WelcomePopup";
 import Main from "./components/Main";
 import Projects from "./components/Projects";
@@ -23,9 +23,9 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Projects />} />
-        <Route path="/main" element={<Main />} />
+        <Route path="/" element={<Navigate to="/projects" />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/main" element={<Main />} />
         <Route path="/experience" element={<Experience />} />
       </Routes>
       <Footer />

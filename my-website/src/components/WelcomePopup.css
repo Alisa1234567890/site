@@ -11,6 +11,7 @@
   justify-content: center;
   z-index: 1000;
   animation: fadeIn 0.4s ease-in-out;
+  pointer-events: none; 
 }
 
 .welcome-popup-overlay.closing {
@@ -44,6 +45,7 @@
   width: 90%;
   box-shadow: 0 20px 60px rgba(5, 95, 70, 0.3);
   animation: slideInUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: auto; 
   overflow: hidden;
 }
 
@@ -73,7 +75,7 @@
   }
 }
 
-/* Particules d'animation */
+
 .popup-particles {
   position: absolute;
   width: 100%;
@@ -293,7 +295,7 @@
   }
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
   .welcome-popup-modal {
     padding: 40px 25px;

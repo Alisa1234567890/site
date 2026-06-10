@@ -6,7 +6,7 @@ function WelcomePopup({ onDiscover }) {
   const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
-    // Animation d'apparition
+    
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
@@ -32,14 +32,14 @@ function WelcomePopup({ onDiscover }) {
   return (
     <div className={`welcome-popup-overlay ${isClosing ? "closing" : ""}`}>
       <div className={`welcome-popup-modal ${isClosing ? "closing" : ""}`}>
-        {/* Animation de particules */}
+
         <div className="popup-particles">
           {[...Array(15)].map((_, i) => (
             <div key={i} className="particle" />
           ))}
         </div>
 
-        {/* Contenu du popup */}
+      
         <div className="popup-content">
           <div className="popup-header">
             <h1 className="popup-title">Bienvenue! 👋</h1>
@@ -70,7 +70,7 @@ function WelcomePopup({ onDiscover }) {
             </button>
           </div>
 
-          {/* Indicateur de scroll */}
+   
           <div className="scroll-indicator">
             <span>ou explorez</span>
           </div>
